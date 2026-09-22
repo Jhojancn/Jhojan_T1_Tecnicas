@@ -27,7 +27,7 @@ public class Jhojan_T1_Tecnicas {
         String numero = sc.nextLine();
         alumno.setNumero_Doc(numero);
 
-        System.out.println("Ingrese nivel socioeconómico:");
+        System.out.println("Ingrese nivel socioeconomico:");
         System.out.println("A| B| C");
         String nivel = sc.nextLine();
         alumno.setNivel_Socieconomico(nivel);
@@ -37,7 +37,7 @@ public class Jhojan_T1_Tecnicas {
         String beca = sc.nextLine();
         alumno.setTipo_Beca(beca);
 
-        System.out.println("\n||DATOS DEL ALUMNO|||");
+        System.out.println("\n||DATOS DEL ALUMNO :|||");
 
         alumno.Mostrarnombres();
         alumno.CalcularPensionFinal();

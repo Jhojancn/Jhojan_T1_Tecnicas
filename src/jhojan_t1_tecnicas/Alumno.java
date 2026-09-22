@@ -38,15 +38,13 @@ public class Alumno {
 
     if (this.tipo_Doc == null) {
         throw new IllegalStateException(
-                "Primero debe ingresar el tipo de documento."
-        );
+                "Primero debe ingresar el tipo de documento." );
     }
     if (this.tipo_Doc.equals("DNI")) {
 
         if (numero_Doc.length() != 8) {
             throw new IllegalArgumentException(
-                    "El DNI debe tener exactamente 8 dígitos."
-            );
+                    "El DNI debe tener exactamente 8 dígitos." );
         }
     } else if (this.tipo_Doc.equals("RESIDENCIA TEMPORAL")) {
 
@@ -92,20 +90,19 @@ public class Alumno {
 
         this.tipo_Beca = tipo_Beca.toUpperCase();
 
-        if (this.tipo_Beca.equals("PARCIAL")) {
+        if 
+            (this.tipo_Beca.equals("PARCIAL")) {
             porc_beca = 0.5;
 
-        } else if (this.tipo_Beca.equals("TOTAL")) {
+        } else if 
+                (this.tipo_Beca.equals("TOTAL")) {
             porc_beca = 1.0;
 
-        } else if (this.tipo_Beca.equals("NINGUNA")) {
+        } else if 
+                (this.tipo_Beca.equals("NINGUNA")) {
             porc_beca = 0.0;
 
-        } else {
-            throw new IllegalArgumentException(
-                    "Tipo de beca inválido."
-            );
-        }
+        } else {throw new IllegalArgumentException("Tipo de beca inválido.");}
     }
 
     public void CalcularPensionFinal() {
