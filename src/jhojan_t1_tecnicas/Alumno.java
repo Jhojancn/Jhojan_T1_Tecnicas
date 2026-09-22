@@ -11,6 +11,9 @@ public class Alumno
     private String numero_Doc;
     private String nivel_Socieconomico;
     private String tipo_Beca;
+    private int pagoNivel;
+    private double porc_beca;
+
 
     public String getNombre() {
         return nombre;
@@ -52,8 +55,25 @@ public class Alumno
     }
 
     public void setNivel_Socieconomico(String nivel_Socieconomico) {
-        this.nivel_Socieconomico = nivel_Socieconomico;
+    if (nivel_Socieconomico == null) {
+        throw new IllegalArgumentException("El nivel socioeconómico no puede ser nulo.");
     }
+    this.nivel_Socieconomico = nivel_Socieconomico.toUpperCase();
+    switch (this.nivel_Socieconomico) {
+        case "A":
+            this.pagoNivel = 500;
+            break;
+        case "B":
+            this.pagoNivel = 300;
+            break;
+        case "C":
+            this.pagoNivel = 100;
+            break;
+        default:
+            this.pagoNivel = 0;
+            throw new IllegalArgumentException("Nivel socioeconómico inválido");
+    }
+}
 
     public String getTipo_Beca() {
         return tipo_Beca;
@@ -65,13 +85,24 @@ public class Alumno
     
     public void ObtenerPorcentajeBeca()
     {
-        
+        int beca=3;
+        System.out.println("Que tipo de beca tiene 1:Parcial 2:Total");
+        if(beca==1)
+        {
+            porc_beca=0.5;
+        }
+        else{
+            porc_beca=1.0;
+        }
     }
     public void CalcularPensionFinal()
     {
-        
+        double Pension=pagoNivel-(pagoNivel*porc_beca);
+        System.out.println("Tu Pensión Final es");
     }
     public void Mostrarnombres() {
-        System.out.println( nombre );
+    System.out.println("Nombre: " + this.nombre + " Tipo de Documento: " + 
+            this.tipo_Doc + " Número de Documento: " + this.numero_Doc + " Nivel Socioeconómico: " 
+            + this.nivel_Socieconomico + " Tipo de Beca: " + this.tipo_Beca);
     }
 }
