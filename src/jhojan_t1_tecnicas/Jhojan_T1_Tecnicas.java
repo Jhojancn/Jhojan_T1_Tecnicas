@@ -28,7 +28,7 @@ public class Jhojan_T1_Tecnicas {
         alumno.setNumero_Doc(numero);
 
         System.out.println("Ingrese nivel socioeconómico:");
-        System.out.println("A / B / C");
+        System.out.println("A| B| C");
         String nivel = sc.nextLine();
         alumno.setNivel_Socieconomico(nivel);
 

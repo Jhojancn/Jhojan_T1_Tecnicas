@@ -114,8 +114,7 @@ public class Alumno {
         System.out.println("Tu Pension Final es: S/ " + pension);
     }
     public void Mostrarnombres() {
-    System.out.println("Nombre: " + this.nombre + " Tipo de Documento: " + 
-            this.tipo_Doc + " Numero de Documento: " + this.numero_Doc + " Nivel Socioeconomico: " 
+    System.out.println("Nombre: " + this.nombre + " Tipo de Documento: " +  this.tipo_Doc + " Numero de Documento: " + this.numero_Doc + " Nivel Socioeconomico: " 
             + this.nivel_Socieconomico + " Tipo de Beca: " + this.tipo_Beca);
     }
 }
