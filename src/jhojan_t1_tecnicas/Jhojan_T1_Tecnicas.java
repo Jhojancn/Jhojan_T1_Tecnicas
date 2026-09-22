@@ -4,17 +4,42 @@
  */
 package jhojan_t1_tecnicas;
 
-/**
- *
- * @author UCA40406
- */
+import java.util.Scanner;
+
 public class Jhojan_T1_Tecnicas {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+
+        Alumno alumno = new Alumno();
+
+        System.out.println("Ingrese el nombre del alumno: ");
+        String nombre = sc.nextLine();
+        alumno.setNombre(nombre);
+
+        System.out.println("Ingrese el tipo de documento:");
+        System.out.println("DNI o Residencia Temporal");
+        String tipo = sc.nextLine();
+        alumno.setTipo_Doc(tipo);
+
+        System.out.println("Ingrese el numero de documento:");
+        String numero = sc.nextLine();
+        alumno.setNumero_Doc(numero);
+
+        System.out.println("Ingrese nivel socioeconómico:");
+        System.out.println("A / B / C");
+        String nivel = sc.nextLine();
+        alumno.setNivel_Socieconomico(nivel);
+
+        System.out.println("Ingrese tipo de beca:");
+        System.out.println("Parcial / Total / Ninguna");
+        String beca = sc.nextLine();
+        alumno.setTipo_Beca(beca);
+
+        System.out.println("\n||DATOS DEL ALUMNO|||");
+
+        alumno.Mostrarnombres();
+        alumno.CalcularPensionFinal();
     }
-    
 }

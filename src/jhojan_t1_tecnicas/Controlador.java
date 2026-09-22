@@ -13,13 +13,11 @@ public class Controlador
     {
         System.out.println("Se agrego un nuevo alumno");
         System.out.println("-------------------");
-
         lista_alumnos.add(nuevo);
     }
     public void lista_alumnos()
     {
         System.out.println("Los alumnos de la lista son: ");
-
         for (int i = 0; i < lista_alumnos.size(); i++) {
             lista_alumnos.get(i).Mostrarnombres();
         }
